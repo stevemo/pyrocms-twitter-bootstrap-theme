@@ -1,0 +1,69 @@
+<?php if( validation_errors() ): ?>
+<div class="row">
+	<div class="alert alert-block alert-error">
+		<a class="close" data-dismiss="alert" href="#">×</a>
+		<h4 class="alert-heading"><?php echo lang('general_error_label'); ?>!</h4>
+		<?php echo validation_errors(); ?>
+	</div>
+</div>
+<?php endif; ?>
+
+<div class="row">
+	<div class="account-container">
+		<div class="account-content clearfix">
+
+			<h1><?php echo lang('user_login_header') ?></h1>
+
+			<?php echo form_open('users/login', array('id'=>'login'), array('redirect_to' => $redirect_to)); ?>	
+
+				<div class="control-group">
+					<label for="email" class="control-label">
+						<?php echo lang('user_email'); ?>
+					</label>
+					<div class="controls">
+						<input type="email" name="email" class="span3" value="<?php echo set_value('email', ''); ?>" placeholder="<?php echo lang('user_email'); ?>">
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label for="password" class="control-label">
+						<?php echo lang('user_password'); ?>
+					</label>
+					<div class="controls">
+						<input type="password" id="password" name="password" maxlength="20" class="span3" placeholder="<?php echo lang('user_password'); ?>" />
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label class="checkbox">
+						<?php echo lang('user_remember'); ?>
+						<?php echo form_checkbox('remember', '1', FALSE); ?>
+					</label>
+				</div>
+
+				<div class="form-actions">
+					<button class="btn btn-primary" type="submit" name="btnLogin"><?php echo lang('user_login_btn') ?></button>		
+				</div>
+
+				<?php echo anchor('users/reset_pass', lang('user_reset_password_link'));?>
+
+			<?php echo form_close(); ?>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- <ul>
+
+	<li class="form_buttons">
+		<input type="submit" value="<?php echo lang('user_login_btn') ?>" name="btnLogin" /> <span class="register"> | <?php echo anchor('register', lang('user_register_btn'));?></span>
+	</li>
+	<li class="reset_pass">
+		<?php echo anchor('users/reset_pass', lang('user_reset_password_link'));?>
+	</li>
+</ul> -->

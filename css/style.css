@@ -27,5 +27,19 @@ body {
 	color: #FFFFFF;
 }
 
-
+/*------------------- users module ------------------------*/
+.account-container {
+    background: none repeat scroll 0 0 #F9F9F9;
+    border: 1px solid #D5D5D5;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px #DADADA, 0 -3px 0 #E6E6E6 inset;
+    display: block;
+}
+.account-container h1 {
+    color: #0074CC;
+    margin-bottom: 0.4em;
+}
+.account-content {
+    padding: 16px 28px 23px;
+}
 
