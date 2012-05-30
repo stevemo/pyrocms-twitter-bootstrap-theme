@@ -52,18 +52,3 @@
 		</div>
 	</div>
 </div>
-
-
-
-
-
-
-<!-- <ul>
-
-	<li class="form_buttons">
-		<input type="submit" value="<?php echo lang('user_login_btn') ?>" name="btnLogin" /> <span class="register"> | <?php echo anchor('register', lang('user_register_btn'));?></span>
-	</li>
-	<li class="reset_pass">
-		<?php echo anchor('users/reset_pass', lang('user_reset_password_link'));?>
-	</li>
-</ul> -->
