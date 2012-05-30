@@ -5,7 +5,7 @@ body {
     padding-top: 60px;
     position: relative;
 }
-/* Header section */
+/*------------------- Header section ------------------------*/
 #logo {
 	margin-bottom: 40px;
 }
@@ -43,3 +43,12 @@ body {
     padding: 16px 28px 23px;
 }
 
+/*------------------- General ------------------------*/
+.box {
+    background: none repeat scroll 0 0 #F9F9F9;
+    border: 1px solid #D5D5D5;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px #DADADA, 0 -3px 0 #E6E6E6 inset;
+    display: block;
+    padding: 16px 30px;
+}
