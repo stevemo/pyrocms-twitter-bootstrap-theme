@@ -18,7 +18,10 @@
 							<ul class="dropdown-menu">
 								{{ if settings:enable_profiles }}
 								<li>
-									<a href="{{ url:site uri='my-profile' }}"><i class="icon-edit"></i>&nbsp;{{ helper:lang line="edit_profile_label" }}</a>
+									<a href="{{ url:site uri='my-profile' }}"><i class="icon-user"></i>&nbsp;{{ user:display_name }}</a>
+								</li>
+								<li>
+									<a href="{{ url:site uri='edit-profile' }}"><i class="icon-edit"></i>&nbsp;{{ helper:lang line="edit_profile_label" }}</a>
 								</li>
 								<li class="divider"></li>
 								{{ endif }}
