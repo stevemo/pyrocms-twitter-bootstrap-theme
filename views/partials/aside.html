@@ -1,0 +1,21 @@
+<div class="widget">
+	<div class="widget-header">
+		<i class="icon-th-list"></i>
+		<h3>{{ helper:lang line="navigation_headline" }}</h3>
+	</div>
+	<div class="widget-content">
+		<ul class="nav nav-list">
+			{{ navigation:links group="sidebar" class="active"}}
+			<li class="{{class}}"><a href="{{ url }}" >{{ title }}</a></li>
+			{{ /navigation:links }}
+		</ul>
+	</div>
+</div>
+
+<div class="widget">
+	<div class="widget-header">
+		<i class="icon-th-large"></i>
+		<h3>Widget</h3>
+	</div>
+	<div class="widget-content">{{ widgets:area slug="sidebar" }}</div>
+</div>
