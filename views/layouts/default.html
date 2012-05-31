@@ -25,6 +25,7 @@
 	{{ theme:css file='bootstrap.css' }}
 	{{ theme:css file='style.css' }}
 	{{ theme:css file='bootstrap-responsive.css' }}
+
 	<!-- end CSS-->
 
 	 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -46,18 +47,28 @@
 	<!--- main container -->
 	<div class="container" id="main">
 		
-		{{ theme:partial name='header' }}	
+		<div class="row" id="header">{{ theme:partial name='header' }}</div>
+
+		{{ theme:partial name='breadcrumbs' }}
 
 		<div class="row">
-			<!--- page content -->
-			<section class="span9">{{ template:body }}</section>
-			<!--- end of page content -->	
+			<div class="span9">
+				{{ session:messages success="alert alert-success" notice="alert alert-info" error="alert alert-error" }}
+			</div>
+		</div>
 
-			<aside class="span3"></aside>
+		<div class="row">
+
+			<section class="span9">
+				<div class="well">{{ template:body }}</div>
+			</section>
+
+			<aside class="span3 hidden-phone">{{ theme:partial name='aside' }}</aside>
 
 		</div>
-		
+
 	</div>
+
 	<!--- end main container -->
 
 

@@ -1,23 +1,22 @@
-<div class="row">
-
-	<div class="span6" id="logo">
-		<h1>
-			<a href="{{ url:site }}" title="">{{ settings:site_name }}</a>
-		</h1>
-		<h2>{{ settings:site_slogan }}</h2>
-	</div>
-
-	{{ if ! user:logged_in }}
-		<div class="span6 hidden-phone" id="header-login">
-			<form class="form-inline">
-				<input type="text" class="input-small" placeholder="Email">
-				<input type="password" class="input-small" placeholder="Password">
-				<label class="checkbox">
-					<input type="checkbox">&nbsp;{{ helper:lang line='user_remember' }}
-				</label>
-				<button type="submit" class="btn">{{ helper:lang line='user_login_btn' }}</button>
-			</form>
-		</div>
-	{{ endif }}
-
+<div class="span7" id="logo">
+	<h1>
+		<a href="{{ url:site }}" title="">{{ settings:site_name }}</a>
+		<small>{{ settings:site_slogan }}</small>
+	</h1>
 </div>
+
+{{ if ! user:logged_in }}
+	<div class="span5 hidden-phone" id="header-login">
+
+		<form class="form-inline pull-right" method="post" action="{{ url:site uri='users/login' }}">
+			<input type="hidden" name="redirect_to" value="{{ url:site uri='users/login' }}">
+			<input type="text" class="input-small" placeholder="Email" name="email">
+			<input type="password" class="input-small" placeholder="Password" name="password">
+			<label class="checkbox">
+				<input type="checkbox">&nbsp;{{ helper:lang line='user_remember' }}
+			</label>
+			<button type="submit" class="btn">{{ helper:lang line='user_login_btn' }}</button>
+		</form>
+
+	</div>
+{{ endif }}
