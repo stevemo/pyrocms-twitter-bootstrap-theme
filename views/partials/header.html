@@ -9,9 +9,10 @@
 
 	{{ if ! user:logged_in }}
 		<div class="span6 hidden-phone" id="header-login">
-			<form class="form-inline">
-				<input type="text" class="input-small" placeholder="Email">
-				<input type="password" class="input-small" placeholder="Password">
+			<form class="form-inline" method="post" action="{{ url:site uri='users/login' }}">
+				<input type="hidden" name="redirect_to" value="{{ url:site uri='users/login' }}">
+				<input type="text" class="input-small" placeholder="Email" name="email">
+				<input type="password" class="input-small" placeholder="Password" name="password">
 				<label class="checkbox">
 					<input type="checkbox">&nbsp;{{ helper:lang line='user_remember' }}
 				</label>
